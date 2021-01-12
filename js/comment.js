@@ -41,9 +41,14 @@ $(document).ready(function () {
     orderDataService.getAllComment(onSuccess, onFailure);
 
     document.getElementById('btnSendComment').onclick = function () {
-        var parm = { "description": document.getElementById('userComment').value }
+        var userInfo = localStorage.getItem("userInfo");
+        if (userInfo != null) {
+            userInfo = JSON.parse(userInfo);
 
-        orderDataService.sendCommentFOrOrder(parm, sendCommentSuccess, sendCommentFailure);
+            var parm = { "userName": userInfo.name, "description": document.getElementById('userComment').value }
+
+            orderDataService.sendCommentFOrOrder(parm, sendCommentSuccess, sendCommentFailure);
+        }
 
     }
 });

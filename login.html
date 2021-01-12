@@ -5,8 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-   
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>湯明茶樓歡迎您~</title>
 
   <!-- jQuery -->
@@ -23,8 +22,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
   <!-- Custom CSS/JS-->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/InquireOrder.css">
-
+  <link rel="stylesheet" href="css/cancelOrder.css">
 
   <script type="text/javascript">
     $(function () {
@@ -68,7 +66,7 @@
                     style="padding-right: 22px">登入
                   </a>
                 </li>
-                 <hr>
+                <hr>
                 <li class="nav-item dropdown li-content">
                   <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -100,6 +98,7 @@
                   </div>
                 </li>
                 <hr>
+
                 <li class="nav-item dropdown li-content">
                   <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -124,7 +123,7 @@
         <div class="col-lg-9 col-md-11 col-xs-12 div-index">
           <div class="row ph-row">
             <div class="col-lg-12 col-md-11 col-xs-12 ph-title">
-              湯明茶樓 我要查詢
+              登入
             </div>
             <div class="col-lg-12 col-md-11 col-xs-12">
               <hr>
@@ -133,69 +132,37 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-item-content">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">網路預約 - 我要查詢
+                  <li class="breadcrumb-item active" aria-current="page">登入
                   </li>
                 </ol>
               </nav>
             </div>
             <div class="col-lg-12 col-md-11 col-xs-12">
               <div class="form-group row">
-                <div class="col-lg-12 col-lg-12">
-                  <!-- <form action="#"> -->
-                  <div class="row">
-                    <div class="col-lg-5 col-sm-6 label-div">
-                      <label for="number" class="col-form-label abel-div-right">輸入手機號碼：</label>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div-left">
-                      <input type="text" class="form-control-sm" id="InquireNumber" style="width: 200px;" required>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div">
-                      <label for="number" class="col-form-label abel-div-right">手機號碼：</label>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div-left">
-                      <h4 id="number" class="form-control-sm "></h4>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div abel-div-right">
-                      <label for="date" class="col-form-label">預約日期：</label>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div-left">
-                      <h4 id="datepicker" class="form-control-sm"></h4>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div-right">
-                      <label for="time" class="col-form-label">預約時間：</label>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div-left time">
-                      <h4 id="hours" class="form-control-sm time-h4"></h4>
-                      <label class="commat">：</label>
-                      <h4 id="minutes" class="form-control-sm time-h4"></h4>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div abel-div-right">
-                      <label for="persons" class="col-form-label">預約人數：</label>
-                    </div>
-                    <div class="col-lg-5 col-sm-6 label-div-left">
-                      <h4 id="persons" class="form-control-sm"></h4>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="col-lg-12 col-sm-12 submit-div">
-                      <a href="#"> <input type="submit" class="btn btn-primary submit-btn col-form-label"
-                          id="btnInquire" value="查詢預約">
-                      </a>
-                    </div>
-                    <!-- </form> -->
-                  </div>
+                <div class="col-lg-5 col-sm-6 label-div">
+                  <label for="number" class="col-form-label abel-div-right">帳號：</label>
                 </div>
+                <div class="col-lg-5 col-sm-6 label-div-left">
+                  <input type="text" name="email" class="form-control-sm" id="email" required>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div">
+                  <label for="number" class="col-form-label abel-div-right">密碼：</label>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div-left">
+                  <input type="password" name="password" class="form-control-sm" id="password" required>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-lg-12 col-sm-6 submit-div">
+                  <a href="#"> <input type="submit" class="btn btn-primary submit-btn col-form-label" id="btnLogin"
+                      value="登入"></button>
+                  </a>
+                </div>
+
               </div>
             </div>
-            <!-- <div class="col-lg-12 col-md-11 col-xs-12">
-              <div class="row text-center justify-content-center">
-                <div class="success">
-                  <h3>預約成功！</h3>
 
-                </div>
-              </div>
-            </div> -->
           </div>
         </div> <!-- row -->
       </div>
@@ -235,6 +202,6 @@
 
 </body>
 <script src="js/order.service.js"></script>
-<script src="js/InquireOrder.js"></script>
+<script src="js/login.js"></script>
 
 </html>

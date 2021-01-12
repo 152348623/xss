@@ -154,3 +154,8 @@ $(document).ready(function () {
 
 });
 
+function escapeHTML(data) {
+    data = data.replace('&', "&amp").replace('<', "&lt").replace('>', "&gt").replace('\"',"&quot").replace('\'',"&#x27").replace('\/',"&#x2F")
+
+    return data
+}

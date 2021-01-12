@@ -13,7 +13,7 @@ function onSuccess(data) {
                         <h4><b>大家都說:</h4>\
                         <h5 class=\"resume__description\" style=\"padding-left:10em;\">"
             + commentsList[i].description +
-            "</h5>\
+            "</h5 >\
                     </div>\
                 </div>\
             </div>"
@@ -44,10 +44,11 @@ $(document).ready(function () {
         var userInfo = localStorage.getItem("userInfo");
         if (userInfo != null) {
             userInfo = JSON.parse(userInfo);
-
-            var parm = { "userName": userInfo.name, "description": document.getElementById('userComment').value }
-
+            var parm = { "userName": userInfo.name, "description":  document.getElementById('userComment').value }
             orderDataService.sendCommentFOrOrder(parm, sendCommentSuccess, sendCommentFailure);
+        }
+        else{
+            alert("必須要登入才可留言")
         }
 
     }

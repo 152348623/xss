@@ -8,7 +8,7 @@ var orderDataService = {
     removeComment: removeComment
 
 }
-var url = "http://10.106.10.161:5000/backend/"
+var url = "https://10.106.10.161:5000/backend/"
 
 
 // API

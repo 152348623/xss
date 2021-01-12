@@ -24,12 +24,5 @@ function userLoginSuccess(data) {
             "password": $password
         }
       orderDataService.userLogin(parm, userLoginSuccess, userLoginFailure)
-  
-      // <script>
-      //   firebase.database().ref("order").on("value", function(data){
-      //     console.log("AAA", data)
-      //   })
-      // </script>
-  
     }
   });

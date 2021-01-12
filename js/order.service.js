@@ -18,7 +18,7 @@ var orderDataService = {
 var token;
 var userName = "";
 // var url = "https://10.106.10.161:5000/backend/"
-var url = "http://192.168.2.105:5000/backend/"
+var url = "https://192.168.2.105:5000/backend/"
 // var url = "http://127.0.0.1:5000/backend/"
 
 
@@ -134,19 +134,21 @@ function getUserName() {
 
 $(document).ready(function () {
 
-    var $userName = document.getElementById('userName');
-    var $login = document.getElementById('login');
+    var $userName = $('#userName');
+    var $login = $('#login');
+
     var userInfo = localStorage.getItem("userInfo")
     if (userInfo != null) {
         userInfo = JSON.parse(userInfo);
-        $userName.style.cssText = "display: initial";
-        $login.style.cssText = "display: none";
 
+        $userName.css("display", "initial");
+        $login.css("display", "none");
         $userName.html(userInfo.name)
         console.log('AAA user');
     } else { // login
-        $userName.style.cssText = "display: none";
-        $login.style.cssText = "display: initial";
+
+        $userName.css("display", "none");
+        $login.css("display", "initial");
         console.log('AAA login');
     }
 

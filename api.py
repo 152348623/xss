@@ -24,7 +24,7 @@ def run():
     return 'My Flask App!'
 
 @app.route("/backend/userLogin", methods=['POST'])
-@cross_origin(origin='localhost', headers=['Content- Type'])
+@cross_origin(origin='*', headers=['Content- Type'])
 def userLogin():
     accountData = request.get_json()
     firebaseSingInAPI = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' + \
@@ -67,7 +67,7 @@ def get_user_info_by_email(email):
 
 
 @app.route("/backend/sendOrder", methods = ['POST'])
-@cross_origin(origin='localhost',headers=['Content- Type'])
+@cross_origin(origin='*',headers=['Content- Type'])
 def sendOrder():
     orderData = request.get_json()
     print("AAA order", orderData)
@@ -85,7 +85,7 @@ def sendOrder():
 
 
 @app.route("/backend/getInquireOrder", methods = ['GET'])
-@cross_origin(origin='localhost',headers=['Content- Type'])
+@cross_origin(origin='*',headers=['Content- Type'])
 def getInquireOrder():
     # accountData = request.get_json()
     phone = request.args.get("phone")
@@ -110,7 +110,7 @@ def getInquireOrder():
         )
 
 @app.route("/backend/cancelInquireOrder", methods = ['POST'])
-@cross_origin(origin='localhost',headers=['Content- Type'])
+@cross_origin(origin='*',headers=['Content- Type'])
 def cancelInquireOrder():
     orderData = request.get_json()
 
@@ -127,7 +127,7 @@ def cancelInquireOrder():
         )
 
 @app.route("/backend/getOrderIfSuccess", methods=['GET'])
-@cross_origin(orgin='localhost', headers=['Content-Type'])
+@cross_origin(orgin='*', headers=['Content-Type'])
 def getOrderIfSuccess():
     # try:
     cur.execute("SELECT * from orders where order_id=(SELECT MAX(order_id) from orders)")
@@ -151,7 +151,7 @@ def getOrderIfSuccess():
         # )
     
 @app.route("/backend/getAllComment", methods=['GET'])
-@cross_origin(orgin='localhost', headers=['Content-Type'])
+@cross_origin(orgin='*', headers=['Content-Type'])
 def getAllComment():
     cur.execute("SELECT * from comments")
     rows = cur.fetchall()
@@ -167,7 +167,7 @@ def getAllComment():
     return jsonify({"comments": commentsList})
 
 @app.route("/backend/sendCommentFOrOrder", methods=['POST'])
-@cross_origin(orgin='localhost', headers=['Content-Type'])
+@cross_origin(orgin='*', headers=['Content-Type'])
 def sendCommentFOrOrder():
 
     commentData = request.get_json()
@@ -179,7 +179,7 @@ def sendCommentFOrOrder():
     return jsonify({"addComment": True})
 
 @app.route("/backend/removeComment", methods=['POST'])
-@cross_origin(orgin='localhost', headers=['Content-Type'])
+@cross_origin(orgin='*', headers=['Content-Type'])
 def removeComment():
 
     commentData = request.get_json()
@@ -198,7 +198,7 @@ def removeComment():
 
 
 @app.route("/storeToken", methods=['POST'])
-@cross_origin(orgin='localhost', headers=['Content-Type'])
+@cross_origin(orgin='*', headers=['Content-Type'])
 def storeToken():
 
     userInfoData = request.get_json()
@@ -212,7 +212,7 @@ def storeToken():
         )
 
 @app.route("/getAllToken", methods=['GET'])
-@cross_origin(orgin='localhost', headers=['Content-Type'])
+@cross_origin(orgin='*', headers=['Content-Type'])
 def getAllToken():
     cur.execute("SELECT * from token")
     rows = cur.fetchall()
